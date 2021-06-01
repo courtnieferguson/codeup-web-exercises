@@ -8,7 +8,7 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello (name){
+function sayHello(name){
     return "Hello, " + name;
 }
 /**
@@ -18,8 +18,12 @@ function sayHello (name){
  *
  * console.log 'helloMessage' to check your work
  */
-
-
+function sayHello(myName){
+    return "Hello, " + myName;
+    var myName = "Courtnie"]
+    var helloMessage = sayHello
+}
+console.log(sayHello)
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -77,7 +81,7 @@ function calculateTip(x,y){
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+function calculateTip(){}
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
