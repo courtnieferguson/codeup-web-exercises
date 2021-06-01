@@ -18,12 +18,9 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-function sayHello(myName){
-    return "Hello, " + myName;
-    var myName = "Courtnie";
-    var helloMessage = sayHello(myName)
-}
-console.log(sayHello)
+    var helloMessage = sayHello("Courtnie")
+console.log(helloMessage)
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -31,9 +28,9 @@ console.log(sayHello)
  * console.
  */
 var myName = "Courtnie";
-function sayHello (myName){
-    return "Hello, " + myName
-}
+helloMessage = sayHello(myName);
+console.log(helloMessage);
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -54,8 +51,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number
  **/
-function isTwo (x){
-    return (x === 2)
+function isTwo (number){
+    return (number == 2)
 }
 console.log(isTwo(1))
 console.log(isTwo(2))
@@ -71,10 +68,13 @@ console.log(isTwo(3))
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(x,y){
-    var number = x * y;
-    return number
+function calculateTip(tipPercentage,totalBill){
+    var tipAmount = (totalBill * tipPercentage);
+    return tipAmount;
 }
+console.log(calculateTip(0.20,20))
+console.log(calculateTip(0.25,25.50))
+console.log(calculateTip(0.15,33.42))
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
