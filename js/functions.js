@@ -29,7 +29,10 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-
+var myName = "Courtnie";
+function sayHello (myName){
+    return "Hello, " + myName
+}
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -49,9 +52,9 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * console.log *outside of the function* to check your work (you should see a
  * different result everytime you refresh the page if you are using the random
- * number)
- */
-
+ * number
+ **/
+function isTwo(random)
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
