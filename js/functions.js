@@ -8,8 +8,8 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name){
-    return "Hello, " + name;
+function sayHello(name) {
+    return "Hello, " + name + "!";
 }
 /**
  * TODO:
@@ -21,7 +21,7 @@ function sayHello(name){
 function sayHello(myName){
     return "Hello, " + myName;
     var myName = "Courtnie";
-    var helloMessage = sayHello
+    var helloMessage = sayHello(myName)
 }
 console.log(sayHello)
 /**
