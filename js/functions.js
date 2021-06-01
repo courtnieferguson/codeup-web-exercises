@@ -20,7 +20,7 @@ function sayHello(name){
  */
 function sayHello(myName){
     return "Hello, " + myName;
-    var myName = "Courtnie"]
+    var myName = "Courtnie";
     var helloMessage = sayHello
 }
 console.log(sayHello)
