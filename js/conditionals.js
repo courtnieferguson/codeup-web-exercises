@@ -33,12 +33,16 @@ function analyzeColor(colorName) {
         return "I don't know anything about your color  " + colorName;
     }
 }
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('red'));
+console.log(analyzeColor('purple'));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -53,14 +57,40 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
+var colorName = prompt ("Favorite Color?")
+switch (colorName){
+    case "blue":
+        alert("Blue is the color of the sky");
+        break;
+    case "red":
+        alert("Strawberries are red");
+        break;
+    case "cyan":
+        alert("I don't know anything about cyan");
+        break;
+    default:
+        alert("I don't know anything about your color  " + colorName);
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+var colorName = prompt ("Favorite Color?")
+switch (colorName){
+    case "blue":
+        alert("Blue is the color of the sky");
+        break;
+    case "red":
+        alert("Strawberries are red");
+        break;
+    case "cyan":
+        alert("I don't know anything about cyan");
+        break;
+    default:
+        alert("I don't know anything about your color  " + colorName);
+}
 /* ########################################################################## */
 
 /**
@@ -83,6 +113,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal(luckyNumber, totalAmount){
+   switch(luckyNumber){
+       case 0:
+           return totalAmount;
+       case 1:
+           return totalAmount - (totalAmount * .10);
+       case 2:
+           return totalAmount - (totalAmount * .25);
+       case 3:
+           return totalAmount - (totalAmount * .35);
+       case 4:
+           return totalAmount - (totalAmount * .50);
+       case 5:
+           return 0;
+   }
+}
+console.log(calculateTotal(0,100))
+console.log(calculateTotal(1,100))
+console.log(calculateTotal(5,100))
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -91,7 +141,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalBill = prompt("What is your total bill?")
+alert("Your lucky number is " + luckyNumber + "\nYour price before the discount is:"+ totalBill + "\nYour total bill is:"+ calculateTotal(luckyNumber,totalBill));
+
 
 /**
  * TODO:
@@ -109,3 +163,15 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var answer = confirm("Would you like to enter a number?");
+  if (answer){
+      var number = prompt("Enter a number");
+      if(isNaN(number)){
+          alert("You didn't enter a number")
+      } else {
+          if(number % 2 == 0) {
+              alert("Your number is even");
+          }else{
+          alert()}
+      }
+  }
