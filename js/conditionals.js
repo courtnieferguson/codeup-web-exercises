@@ -19,6 +19,18 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+function analyzeColor(colorName) {
+    if colorName === 'blue'
+        return "blue is the color of the sky";
+    else if colorName === 'red'
+        return "Strawberries are red";
+    else if colorName === 'cyan'
+        return "I don't know anything about cyan";
+}
+cosole.log analyzeColor(blue)
+
+
+}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
