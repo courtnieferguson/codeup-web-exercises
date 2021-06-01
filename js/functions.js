@@ -11,7 +11,6 @@
 function sayHello (name){
     return "Hello, " + name;
 }
-
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -20,8 +19,6 @@ function sayHello (name){
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello ("Courtnie");
-console.log(helloMessage);
 
 /**
  * TODO:
@@ -54,7 +51,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number
  **/
-function isTwo(random)
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
