@@ -72,16 +72,24 @@ function calculateTip(tipPercentage,totalBill){
     var tipAmount = (totalBill * tipPercentage);
     return tipAmount;
 }
-console.log(calculateTip(0.20,20))
-console.log(calculateTip(0.25,25.50))
-console.log(calculateTip(0.15,33.42))
+
+
+
+console.log(calculateTip(0.20,20));
+console.log(calculateTip(0.25,25.50));
+console.log(calculateTip(0.15,33.42));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTip(){}
+
+totalBill = prompt("Enter the Total Bill")
+tipPercentage = prompt("Enter the tip percentage")
+alert("The tip should be " + calculateTip(tipPercentage,totalBill));
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -96,3 +104,7 @@ function calculateTip(){}
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(price, discountPercentage){
+    return price - (price * discountPercentage);
+}
+console.log(applyDiscount(45.99,0.12));
