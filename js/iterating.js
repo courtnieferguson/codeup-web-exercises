@@ -50,7 +50,7 @@ for(var i = 0; i < names.length; i++) {
     var names = ['Matthew', 'Mark', 'Luke', 'John']
 
     names.forEach(function(name) {
-        console.log('Here is a lovely name: ' + name + '.');
+        console.log('Here is ' + name + '.');
     });
 
 
@@ -70,8 +70,10 @@ for(var i = 0; i < names.length; i++) {
 
     var names = ['Matthew', 'Mark', 'Luke', 'John']
 
-console.log(names[0]);
-console.log(names[3]);
-console.log(names[2]);
+console.log('First: ' + (names[0]));
+console.log('Second: ' + (names[1]));
+console.log('Last: ' + (names[3]));
+
+
 
 })();
