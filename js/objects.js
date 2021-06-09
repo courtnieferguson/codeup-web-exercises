@@ -52,7 +52,18 @@ console.log(person.sayHello());
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
      ];
-
+    shoppers.forEach(function (shopper) {
+        if (shopper.amount <= 200) {
+            let discount = 0;
+            let amount = shopper.amount;
+        console.log(shopper.name + " owes $" + amount.toFixed(2));
+        }
+        else {
+            let discount = shopper.amount * .12;
+            let amount = shopper.amount - discount;
+        console.log(shopper.name + " spent $" + (shopper.amount) + " gets a discount of $" + (discount.toFixed(2)) + " and owes $" + (shopper.amount - discount))
+        }
+    });
 
 
     /** TODO:
@@ -67,6 +78,7 @@ console.log(person.sayHello());
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
 var books = [
         {
             order:"1",
