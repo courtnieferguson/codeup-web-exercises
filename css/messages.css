@@ -14,8 +14,9 @@ body, html {
 }
 
 message-info{
+    /* example of using variables in css */
     background-color: lightblue;
-    color: blue;
+    color: var(--info-color);
 }
 
 .message-success{
