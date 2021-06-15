@@ -1,0 +1,39 @@
+h1 {
+    align-content: center
+}
+
+h1, h2 {
+    color: #007069;
+    text-decoration: underline;
+}
+
+body{
+    background-color: #333333;
+    background-image: url();
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+* {
+    font-family: 'Indie Flower', cursive;
+}
+
+a {
+    color: #eeeeee;
+    font-size: 1.2em;
+    transition: 500ms;
+}
+
+td, tr {
+    padding: 10x;
+    font-size: 1em;
+}
+
+
+
