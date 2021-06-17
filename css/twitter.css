@@ -8,6 +8,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -25,36 +26,44 @@ header {
 
 a {
     color: var(--link-color);
+    display: inline-block;
+    float: right;
 }
 .nav-item {
     display: inline-block;
     padding-inline: 1.5em;
     padding-block: 1.5em;
-    width: fixed 100%
 }
+
 .top-nav {
     background: var(--light-bg);
-    z-index: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
+
 .profile {
     background: var(--light-bg);
-    float: .5em
-    height: 80px
-    z-index: auto;
+    line-height: 80px;
+    width: 100%;
 }
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -62,26 +71,84 @@ a {
     font-weight: bold;
     padding: 8px;
     border-radius: 5px;
+    float: right;
 }
+
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    float: right;
 }
+
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-muted {
     color: var(--main-link-color);
 }
 
-media {
+.media {
+    display: inline-block;
     background-color: lightgray;
-    padding: .5em
-    width: 100%
-    margin-top: 1.33em
-
+    padding:;
+    width: 100%;
+    margin-top: 1.33em;
+    overflow: auto;
 }
+
+.profile-details {
+    display: inline-block;
+    margin: .5em;
+    width: 20%;
+}
+
+.timeline {
+    display: inline-block;
+    margin: .5em;
+    background-color: white;
+    width: 50%;
+}
+
+.who-to-follow {
+    margin: .5em;
+    background-color: white;
+    width: 20%;
+    float: right;
+}
+
+.profile-image {
+    position: absolute;
+    top: 240px;
+}
+
+.media-image {
+    float: left;
+    width: 50px;
+    margin-top: 1.33em;
+}
+
+.media-body {
+    overflow: auto;
+    margin-top: 1.33em
+    display: inline-block;
+}
+
+.profile-form {
+    line-height: 80px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
