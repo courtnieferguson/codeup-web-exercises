@@ -95,8 +95,9 @@ a {
 
 .media {
     display: inline-block;
-    background-color: lightgray;
-    padding:;
+    background-color: light-bg;
+    color:var(--seperator-color);
+    padding:.5em;
     width: 100%;
     margin-top: 1.33em;
     overflow: auto;
@@ -142,6 +143,10 @@ a {
 .profile-form {
     line-height: 80px;
     display: inline-block;
+}
+
+.profile-entry {
+    margin: .5em
 }
 
 
