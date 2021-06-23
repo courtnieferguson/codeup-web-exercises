@@ -1,0 +1,19 @@
+.container {
+    justify-content: center;
+    display: flex
+}
+
+.centered {
+    margin: auto;
+    max-width: 300px;
+}
+
+div.row {
+    width: auto;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    text-align: center;
+}
+
