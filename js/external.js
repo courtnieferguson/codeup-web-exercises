@@ -44,6 +44,17 @@ alert('')
 // Premium members do not need to buy a specific amount
 // of products.
 
+var ValidOffer = confirm("Is the offer valid?");
+
+var TwoOrMoreItems = parseInt(prompt("How many items do you have in your cart?")) >= 2;
+
+var PreMember = confirm("Are you a premium member?");
+
+var UseOffer = (TwoOrMoreItems || PreMember) && ValidOffer;
+
+alert("You can use this offer is a " + UseOffer + " statement.");
+
+
 
 
 
