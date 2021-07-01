@@ -1,1 +1,5 @@
+div.col {
+    display: flex;
+    text-align: center;
 
+}
