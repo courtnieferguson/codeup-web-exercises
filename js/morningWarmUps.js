@@ -1,18 +1,19 @@
 // TODO: Create a function named countSpaces that accepts a string and returns the total number of spaces in the string.
 
 function countSpaces(input) {
+    if (typeof (input) == "string") {
+        return (input).split("").length - 1
+    }else{
     return ((input.toString()).split("").length - 1)
 }
 
 
 // TODO: Add validation to function above, if the argument pass is not a string it should return false.
 
-if (typeof (input) == "string") {
-    return ((input).split("").length - 1)
-}
+
+console.log(countSpaces(taco))
 
 
-countSpaces("taco")
 
 // July 6th 2021
 
@@ -30,7 +31,4 @@ function capitalizeAllNames(arr) {
 function capitalizeFirstLetter(arr) {
     return arr.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 }
-
-
-
 

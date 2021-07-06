@@ -34,7 +34,7 @@
         var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        function titleChange ()  {
+        function titleChange() {
             mainHeader.innerHTML = "JavaScript is Cool";
         }
 
@@ -50,47 +50,32 @@
         var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
+
+
+        for (var i = 0; i < listItems.length; i += 2) {
+            listItems[i].style.color = "grey";
+        }
+
         // TODO: Set text color of li with dbid = 1 to blue
 
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute('data-dbid') === '1'){
-            sxcd fv  -listItems[i].style.color = "blue";
-
-          }
-             if (i % 2 !== 0) {
-            listItems[i].style.color = "grey";
-          }
+        for (let item of listItems) {
+            if (item.getAttribute("data-dbid") === "1") {
+                item.style.color = "blue";
+            }
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        var subParagraphs = document.querySelector(".sub-paragraph");
+
         //var subParagraphs = document.getElementById("sub-paragraph").textContent = "Paragraph changed!";
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        subParagraphs.innerHTML = "Mission Accomplished!"
 
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        document.querySelector("#mainTitleChange").addEventListener("click", titleChange);
-        document.querySelector("#subTitleChange").addEventListener("click", subHeaderChange);
-
-        // Defining the function within the addEventListener method
-        document.querySelector("#listColorChange").addEventListener("click", function() {
-            for (var i = 0; i < listItems.length; i++) {
-                if (listItems[i].getAttribute('data-dbid') === '1'){
-                    listItems[i].style.color = "blue";
-                    //continue;
-                }
-                if (i % 2 !== 0) {
-                    listItems[i].style.color = "grey";
-                }
-            }
-
-            document.getElementById("contentChange").addEventListener("click", function() {
-                subParagraphs[0].innerHTML = "Mission Accomplished!";
-            });
-        });
 
     })();
-        document.getElementById("sub-paragraph").textContent = "Paragraph changed!";
-    })();
+
+
+
+</script>
 </script>
 </body>
 </html>
