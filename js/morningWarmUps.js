@@ -71,9 +71,14 @@ var personThree = {
 //                    { "originalString":"hello", lengthOfOriginalString:5 },
 //                    { "originalString":"dave", lengthOfOriginalString:4 }
 //                   ]
-function {
-    var arrayOfStrings = ["originalString" , "countOfLetters"];
+function arrayofObjects(arrayOfStrings){
+    var arrayObj = []
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+        console.log(arrayOfStrings[i])
+    }
 }
+
+arrayofObjects(['hello', 'dave'])
 
 // Part 2
 // TODO: Create a function that takes the array of objects from PART 1
@@ -83,9 +88,33 @@ function {
 //                    { "originalString":"dave", lengthOfOriginalString:4 }
 //                  ]
 //          returns: "hello dave"
+
+
 // TODO: Create a function named getTallUsers that accepts an array of objects. The objects in the array will be in the same format
 //  as PersonOne, PersonTwo, and PersonThree. The functions job is to return an array of users that have heightInInches equal to or greater than 65.
 var people = [personOne,personTwo,personThree];
 // Example: getTallUsers(people)
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
 //
+
+ function getTallUsers(arrayOfUsers){
+
+     var heightInInches = [];
+
+
+     for (let i = 0; i < arrayOfUsers.length; i++) {
+
+
+         if (arrayOfUsers[i].heightInInches >= 65){
+             // this means they are passing
+
+             heightInInches.push(
+                 {
+                 name: arrayOfUsers[i].firstName,
+                 ageInYears: arrayOfUsers[i].ageInYears,
+                 }
+             )
+
+             return TallUsers();
+
+ }
