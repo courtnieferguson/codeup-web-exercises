@@ -97,7 +97,7 @@ var people = [personOne,personTwo,personThree];
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
 //
 
- function getTallUsers(arrayOfUsers){
+/* function getTallUsers(arrayOfUsers){
 
      var heightInInches = [];
 
@@ -116,5 +116,4 @@ var people = [personOne,personTwo,personThree];
              )
 
              return TallUsers();
-
  }
