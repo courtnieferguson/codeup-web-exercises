@@ -325,3 +325,68 @@ numberInfo(0);
         isEven: true,
     isZero: true
 }
+
+
+const toString = Object.prototype.toString;
+
+toString.call(new Date);    // [object Date]
+toString.call(new String);  // [object String]
+toString.call(Math);        // [object Math]
+
+// Since JavaScript 1.8.5
+toString.call(undefined);   // [object Undefined]
+toString.call(null);        // [object Null]
+
+
+
+
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+const words = str.split(' ');
+console.log(words[3]);
+// expected output: "fox"
+
+const chars = str.split('');
+console.log(chars[8]);
+// expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+
+
+
+
+let a = 2;
+let b = 'hello';
+
+console.log(a += 3); // addition
+// expected output: 5
+
+console.log(b += ' world'); // concatenation
+// expected output: "hello world"
+
+
+
+
+function removeDuplicates(arrayOfStrings){
+
+    var uniqueStrings = [];
+
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+
+         if (uniqueStrings.includes(arrayOfStrings[i])){
+
+         }else{
+             uniqueStrings.push(arrayOfStrings[i])
+         }
+
+     }
+
+     return uniqueStrings
+
+ }
+
+ console.log(removeDuplicates(["bob", "squid", "samantha", "bob"]));
