@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+<dl>
+    <dt>How many people visit the national parks?</dt>
+    <dd>Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
+
+    <dt>What was the most visited National Park in 2020? </dt>
+    <dd>Blue Ridge Parkway had 14.1 recreational visits in 2020 to make it the most visited National Park that year.</dd>
+
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd>Permanent, temporary, and seasonal employees: More than 20,000</dd>
+
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+    <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.</dd>
+
+    <dt>Can I bring my service dog to a national park?</dt>
+    <dd>Yes, service dogs are legally permitted anywhere in a park that visitors can go. Learn more about service animals in national parks, including the difference between service animals and emotional support animals.</dd>
+
+    <dt>What is the largest national park site?</dt>
+    <dd>Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+
+    <dt>Who is the director of the National Park Service?</dt>
+    <dd>Shawn Benge, Deputy Director, Operations, is exercising the delegated authority of the Director of the National Park Service.</dd>
+
+    <dt>Can I bring my pet to a national park?</dt>
+    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
+
+    <dt>What government agency oversees the National Park Service?</dt>
+    <dd>The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+
+    <dt>What do I need to know about driving off road in national parks?</dt>
+    <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+</dl>
+
+<button class="toggler">Toggle DD's Visibility</button>
+
+<script src="./js/jquery.js" ></script>
+<script>
+
+    // Add a class to all dd elements named invisible.
+    //
+    // Create some CSS rules that sets elements with the invisible class to visibility: hidden;.
+    //
+    // Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    //
+    //     Bonus
+    //
+    // When any of the dt elements is clicked, the element that was clicked should be highlighted.
+
+    $(document).ready(function() {
+
+        $('dd').addClass('invisible');
+
+        $('.toggler').click(function () {
+            $('dd').toggleClass('invisible')
+        });
+
+        $('dt').click(function () {
+            $(this).css('background-color', 'yellow')
+        });
+
+
+
+
+
+
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
