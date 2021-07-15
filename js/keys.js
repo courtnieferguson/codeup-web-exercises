@@ -1,1 +1,1 @@
-keys.js
+let mapboxAPIKey = "pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg"
