@@ -10,8 +10,10 @@
     </style>
 </head>
 <body>
-
 <h1>National Parks FAQ</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
 <dl>
     <dt>How many people visit the national parks?</dt>
@@ -73,15 +75,19 @@
         });
 
 
-
-
-
-
-
+$('#highlighter').click(function() {
+    $('ul').each(function () {
+        $(this).children().last().css('background-color', 'yellow')
     });
+});
 
+$('h3').click(function() {
+    $(this).next().children().css('font-weight', 'bold');
+});
 
-
+$('li').click(function () {
+$(this).parent().children().first().css('color', 'blue')
+    });
 
 </script>
 </body>
