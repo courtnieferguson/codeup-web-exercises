@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPI Map</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<style>
+    #marker {
+        background-image: url('https://scontent-hou1-1.xx.fbcdn.net/v/t31.18172-8/1264711_1402696036628068_2146803603_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=e3f864&_nc_ohc=rgQfe4NlpQUAX81elPm&_nc_ht=scontent-hou1-1.xx&oh=fea187f3827972c6ead29d9ab817b336&oe=60F58D9A');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+</style>
+<div id='map' style='width: 100%; height: 800px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg';
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-97.1664843,26.115381199999998], // starting position [lng, lat]
+        zoom: 11 // starting zoom
+    });
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg';
+    var monument = [-97.16387952048774,26.089869782306252];
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: monument,
+        zoom: 15
+    });
+
+    // create the popup
+    var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Yummies Bistro'
+    );
+
+    // create DOM element for the marker
+    var el = document.createElement('div');
+    el.id = 'marker';
+
+    // create the marker
+    new mapboxgl.Marker(el)
+        .setLngLat(monument)
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);
+
+</script>
+
+
+</body>
+</html>
