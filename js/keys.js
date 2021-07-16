@@ -1,1 +1,2 @@
-let mapboxAPIKey = "pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg"
+const mapboxAPIKey = "pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg"
+const OpenWeatherAPIKey= `0a9d88b94f9dd96f3d1204102a5c65d2`

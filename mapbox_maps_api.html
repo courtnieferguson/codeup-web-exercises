@@ -6,6 +6,8 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="mapbox-geocoder-utils.js"></script>
+
 
 </head>
 <body>
@@ -32,12 +34,20 @@
         center: [-97.1664843,26.115381199999998], // starting position [lng, lat]
         zoom: 11 // starting zoom
     });
+
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("132 E Gardenia St, South Padre Island, TX 78597", map).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(20);
+    });
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg';
-    var monument = [-97.16387952048774,26.089869782306252];
+    var yummie = [-97.16387952048774,26.089869782306252];
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
-        center: monument,
+        center: yummie,
         zoom: 15
     });
 
@@ -56,6 +66,52 @@
         .setPopup(popup) // sets a popup on this marker
         .addTo(map);
 
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg';
+    var restaurants = {
+        'type': 'FeatureCollection',
+        'features': [
+            {
+                'type': 'Feature',
+                'properties': {},
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [100.507, 13.745]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {},
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [98.993, 18.793]
+                }
+            },
+            {
+                'type': 'Feature',
+                'properties': {},
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [98.993, 18.793]
+                }
+            },
+        ]
+    };
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [100.507, 13.745],
+        zoom: 9
+    });
+
+    map.on('load', function () {
+        cities.features.forEach(function (city, index) {
+            setTimeout(function () {
+                map.jumpTo({ center: city.geometry.coordinates });
+            }, 2000 * index);
+        });
+    });
 </script>
 
 
