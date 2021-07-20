@@ -9,22 +9,35 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script><script>
 
+
     "use strict"
     $(document).ready(function () {
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
-            APPID: "0a9d88b94f9dd96f3d1204102a5c65d2",
+            APPID: `0a9d88b94f9dd96f3d1204102a5c65d2`,
             lat:    29.423017,
             lon:   -98.48527,
             units: "imperial"
         }).done(function(data) {
             console.log('5 day forecast', data);
         });
-
-
-
-
     })
 </script>
+<section class="top-banner">
+    <div class="container">
+        <h1 class="heading">Simple Weather App</h1>
+        <form>
+            <input type="text" placeholder="Search for a city" autofocus>
+            <button type="submit">SUBMIT</button>
+            <span class="msg"></span>
+        </form>
+    </div>
+</section>
+<section class="ajax-section">
+    <div class="container">
+        <ul class="cities"></ul>
+    </div>
+</section>
+
 </body>
 </html>
