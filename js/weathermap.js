@@ -2,18 +2,18 @@
 
 $(document).ready(function () {
 
-    var lat = 29.424349 // geocode what user's type in click func
-    var long = -98.491142 // get coordinates, reset lat & long in click func , call weatherData
+    var lat = 29.424349
+    var long = -98.491142
 
-    let mapboxAPIKey = "pk.eyJ1IjoiY291cnRuaWVmZXJndXNvbjkiLCJhIjoiY2tyNTF0emo4MmQ1NzJvbzdrZGRsbnd4MiJ9.M_E5w8LuARdS94_A0g1KKg";
     mapboxgl.accessToken = mapboxAPIKey
 
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        zoom: 15,
+        zoom: 12,
         center: [long, lat]
     });
+
     var placeMarker = new mapboxgl.Marker({
         draggable: true
     })
@@ -54,21 +54,45 @@ $(document).ready(function () {
                     $('#main-card-col').append(weatherCard)
                 }
 
-            })  // loop ends
-        }) // .done function ends
-    } // weatherData function ends
+            })
+        })
+    }
 
 
     function onDragEnd() {
         var lngLat = placeMarker.getLngLat()
         console.log(lngLat);
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    const inputVal = input.value;
-});
-const apiKey = `0a9d88b94f9dd96f3d1204102a5c65d2`;
-const inputVal = input.value;
+        reverseGeocode(lngLat, mapboxAPIKey).then(function(result) {
+            console.log(result);
+            $('#current_city').html('Current Location: ' + result);
+            placeMarker
+                .setLngLat([long, lat])
+
+            map.flyTo({
+                center: [long, lat],
+                essential: true
+            })
+        });
+
+
+
+
+
+        long = lngLat.lng;
+        lat = lngLat.lat;
+        weatherData();
+    }
+
+    placeMarker.on('dragend', onDragEnd)
+
+    $('#find_button').click(function (e) {
+        e.preventDefault();
+        var address = $("#userInput").val();
+        var lngLat = placeMarker.getLngLat();
+        console.log(address)
+
+        $('#current_city').html('Current Location: ' + address);
 
         geocode(address, mapboxAPIKey).then(function(result) {
             console.log(result);
@@ -80,10 +104,11 @@ const inputVal = input.value;
 
             map.flyTo({
                 center: [long, lat],
-                essential: true // this animation is considered essential
-            }) // flyto map func ends
-        }); // geocode func ends
+                essential: true
+            })
+        });
         weatherData();
-    }); // find func ends
+    });
 
-}) // document.ready ends
+})
+
