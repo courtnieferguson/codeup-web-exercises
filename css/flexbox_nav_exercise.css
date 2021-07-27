@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background-color: #C1C1C1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    font-family: 'Impact', sans-serif;
+    font-size: .7em;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0;
+}
+a {
+    display: inline-block;
+    padding: 1em;
+}
+
+a:visited {
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Impact;
+}
+nav a:hover {
+    background: black;
+    color: dodgerblue;
+}
+
+.logo {
+    position: relative;
+    font-size: 3em;
+    align-items: center;
+    font-family: 'Krona One', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
